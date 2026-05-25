@@ -66,7 +66,7 @@ doctrine-blindness-legal-ai/
 Download **IndianBailJudgments-1200** from HuggingFace and place as `/content/indian_bail_judgments.json`:
 
 ```
-https://huggingface.co/datasets/SnehaDeshmukh/IndianBailJudgments-1200
+Dataset available at: [anonymous — link provided upon acceptance]
 ```
 
 ---
@@ -86,12 +86,6 @@ MISTRAL_API_KEY     # Mistral-Large (free tier)
 
 Run notebooks in order: `00_dataset_verification` → `TaskA` → `TaskB` → `TaskC`.
 Each notebook saves to Google Drive and resumes automatically on disconnection.
-
----
-
-## Related Work
-
-This paper builds on **IndianBailJudgments-1200** (Deshmukh & Kamble, arXiv 2025): [arXiv:2507.02506](https://arxiv.org/abs/2507.02506)
 
 ---
 
