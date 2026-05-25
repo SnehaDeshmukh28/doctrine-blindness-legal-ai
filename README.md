@@ -2,13 +2,13 @@
 
 **Doctrine Blindness in Legal AI: Auditing LLM Comprehension of the Co-Accused Parity Doctrine in Indian Bail Jurisprudence**
 
-*Submitted to EMNLP 2026 — Under Review*
+*Submitted to EMNLP 2026 - Under Review*
 
 ---
 
 ## Overview
 
-This repository contains the evaluation code for our paper, which introduces a three-task diagnostic suite to audit whether large language models comprehend the **co-accused parity doctrine** — a uniquely Indian legal principle where bail is granted because a similarly-placed co-accused has already received bail.
+This repository contains the evaluation code for our paper, which introduces a three-task diagnostic suite to audit whether large language models comprehend the **co-accused parity doctrine** - a uniquely Indian legal principle where bail is granted because a similarly-placed co-accused has already received bail.
 
 Built on [IndianBailJudgments-1200](https://huggingface.co/datasets/SnehaDeshmukh/IndianBailJudgments-1200), a dataset of 1,200 annotated Indian High Court and Supreme Court bail orders (1975–2025).
 
@@ -16,10 +16,10 @@ Built on [IndianBailJudgments-1200](https://huggingface.co/datasets/SnehaDeshmuk
 
 ## Three Tasks
 
-**Task A — Parity-Stratified Accuracy**
+**Task A - Parity-Stratified Accuracy**
 Zero-shot bail outcome prediction on all 1,200 cases. Accuracy measured separately on parity=True (n=341, true grant rate 77.1%) and parity=False (n=859, true grant rate 55.1%) cases. Shows that standard accuracy metrics cannot detect doctrine comprehension.
 
-**Task B — Doctrine Reveal Experiment**
+**Task B - Doctrine Reveal Experiment**
 For all 341 parity=True cases, runs three prompt versions:
 - V1 (Baseline): case facts only
 - V2 (Correct signal): facts + *"The co-accused was granted bail"*
@@ -27,7 +27,7 @@ For all 341 parity=True cases, runs three prompt versions:
 
 Metric: **Doctrine Sensitivity Rate (DSR)** = fraction of cases where V2 and V3 predictions differ.
 
-**Task C — Demographic × Doctrine Interaction**
+**Task C - Demographic × Doctrine Interaction**
 Applies V1/V2/V3 prompts with accused name swaps (Hindu↔Muslim, Male→Female).
 Metric: **Demographic Doctrine Sensitivity Gap (DDSG)** = |DSR_original − DSR_swapped|
 
@@ -112,7 +112,7 @@ This paper builds on **IndianBailJudgments-1200** (Deshmukh & Kamble, arXiv 2025
 
 ## Ethics
 
-This framework is a diagnostic audit tool only — not for assisting or automating bail decisions. All case data is from publicly available Indian court records.
+This framework is a diagnostic audit tool only - not for assisting or automating bail decisions. All case data is from publicly available Indian court records.
 
 ---
 
